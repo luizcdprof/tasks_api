@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Task
+from .models import Task, UserProfile
 
 # Register your models here.
 @admin.register(Task)
@@ -9,4 +9,13 @@ class TaskAdmin(admin.ModelAdmin):
         'created_at',
         'finished_at',
         'is_completed'
+    )
+
+@admin.register(UserProfile)
+class UserProfileAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'user',
+        'email',
+        
     )
