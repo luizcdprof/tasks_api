@@ -1,24 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ToDo List</title>
+        <link rel="stylesheet" href="{% static 'tasks/css/styles.css' %}">
     </head>
     <body>
-        {% block header %}
-            {% include 'header.html' %}
-        {% endblock %}
-
+        {% include 'header.html' %}
+        
         {% block content %}
         {% endblock %}
 
-        <footer>
-            <div class="footer">
-                &copy;2025 - All rights reserved
-            </div>
-            {% block footer %}
-            {% endblock %}
-        </footer>
+        {% include 'footer.html' %}
     </body>
+
+    <script src="{% static 'tasks/js/scripts.js' %}"></script>
 </html>

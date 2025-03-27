@@ -16,6 +16,5 @@ class UserProfileAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'user',
-        'email',
-        
+        'email',        
     )
